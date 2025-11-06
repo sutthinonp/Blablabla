@@ -2,12 +2,6 @@ import type { Metadata } from "next";
 import Sidebar from "@/components/sidebar";
 import Navbar from "@/components/navbar";
 import "@/app/globals.css";
-import { Poppins } from "next/font/google";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Blablabla",
@@ -17,8 +11,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="th">
-      <body className={poppins.className}>
-        <div className="flex h-screen overflow-hidden gap-4 bg-gray-100">
+      <body>
+        <div className="flex h-screen overflow-hidden">
           <Sidebar />
           <div className="flex flex-col flex-1 overflow-hidden">
             <div className="bg-white flex-shrink-0">
@@ -33,4 +27,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
 
