@@ -1,8 +1,10 @@
+// App.tsx
+import { useRoutes } from "react-router-dom";
+import routes from "@/routes/routes";
 
 function App() {
-  return (
-    <div>App</div>
-  )
+  const element = useRoutes(routes);
+  return element;
 }
 
-export default App
+export default App;
